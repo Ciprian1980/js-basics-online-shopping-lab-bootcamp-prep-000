@@ -17,7 +17,8 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  // write your code here
+  if (item = addToCart);
+  return `${item} has been added to your cart.`;
 }
 
 function total() {
