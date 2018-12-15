@@ -17,15 +17,17 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  if (cart.length !== 0);
-  for (let i = 0; i < cart.length; i++);
-  if(cart.length-1 == i){
-    
+  var price;
+   if (cart.length == 0);{
+     return (`Your shopping cart is empty`);
+    for (let i = 0; i < cart.length; i++);{
+       if(cart.length-1 == i){
+       return `In your cart, you have ${i} at `
+       }
+  
+       else(`Your shopping cart is empty`);
   }
-  
-  else(`Your shopping cart is empty`);
-  return `${i} has been added to your cart.`;
-  
+ }
 }
 
 function total() {
