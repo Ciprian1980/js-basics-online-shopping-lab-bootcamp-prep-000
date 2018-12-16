@@ -17,18 +17,24 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  var price;
-   if (cart.length == 0);{
-     return (`Your shopping cart is empty`);
-    for (let i = 0; i < cart.length; i++);{
-       if(cart.length-1 == i){
-       return `In your cart, you have ${i} at `
-       }
-  
-       else(`Your shopping cart is empty`);
+  var itemPrice;
+  if (cart.length === 0){
+    return (`Your shopping cart is empty.`);
   }
- }
+  else if(getCart().length === 1){
+    return `In your cart, you have ${cart[0]} at ${itemPrice}.`
+  }
+  
+  for (let i = 0; i < cart.length; i++){
+    if(cart.length === 2){
+      return`In your cart, you have ${cart.length()['']} at ${cart.itemPrice()['']}, and ${cart.length()['']} at ${cart.itemPrice()}.`;
+    }
+    else if(cart.length >=3){
+      return`In your cart, you have ${cart.length()} at ${cart.itemPrice()}, and ${cart.length()} at ${cart.itemPrice()}, and ${cart.length()} at ${cart.itemPrice()}}.`;
+    }
+  }
 }
+
 
 function total() {
   // write your code here
