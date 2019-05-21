@@ -36,6 +36,7 @@ function viewCart() {
      }
       cartDescription += `${items}, and ${lastItem.itemName} at $${lastItem.itemPrice}.` ; 
    }
+   return cartDescription;
  }
 
 
