@@ -30,11 +30,11 @@ function viewCart() {
     }
     else if(cart.length >=3){
       var items = '';
-     // var lastItem = cart[0];
+      var lastItem = cart[-1];
       for (let i = 0; i < cart.length-1; i++){
       items += `${cart[i].itemName} at $${cart[i].itemPrice}`;
      }
-     return `In your cart, you have` 
+      cartDescription += `${items}, and ${lastItem.itemName} at $${lastItem.itemPrice}.` ; 
    }
  }
 
