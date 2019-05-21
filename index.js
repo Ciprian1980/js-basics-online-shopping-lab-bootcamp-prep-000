@@ -29,10 +29,11 @@ function viewCart() {
     }
     else if(cart.length >=3){
       var items = [];
-      for (let i = 0; i < cart.length; i++){
-      items.push(`${cart[i].itemName} at $${cart[i].itemPrice}`)
+      var lastItem = cart[cart.length-1];
+      for (let i = 0; i < cart.length-1; i++){
+      items.push(`${cart[i].itemName} at $${cart[i].itemPrice}`);
      }
-     return `In your cart, you have ${items}`
+     return `In your cart, you have ${items.join(', ')}`  + 'and' + ${lastItem};
    }
  }
 
